@@ -23,9 +23,12 @@
         <!--estilo menu-->
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <!--estilos sobreescritos-->
- <style type="text/css">
+<style type="text/css">
 body.sfdcBody.brandQuaternaryBgr {
-    background: #e2e2e5;
+    background: #85b5ea;
+}
+#lead_source {
+    display: none;
 }
 .container {
     width: 400px;
@@ -60,7 +63,7 @@ p {
     text-transform: capitalize;
     margin: 0 15px;
 }
-input[type="text"] {
+input[type="text"], input[type="email"]{
     width: 85%;
     height: 35px;
     margin: 10px 0;
@@ -69,7 +72,8 @@ input[type="text"] {
     overflow: auto;
     position: relative;
 }
-input[type="text"]:hover, input[type="text"]:focus, input[type="text"]:active {
+input[type="text"]:hover, input[type="text"]:focus, input[type="text"]:active,
+input[type="email"]:hover, input[type="email"]:focus, input[type="email"]:active {
     outline: none;
     font-size: 20px;
 }
@@ -114,9 +118,8 @@ input[type="submit"] {
 		</main>
 		<hr/>
 			
-		<apex:page >
-
-
+<apex:page >
+<h1>FORMULARIO NUEVO</h1>
 <div class="container">
   <div class="bg">
     <div class="logo"> <img src="https://image.flaticon.com/icons/svg/143/143361.svg" /> </div>
@@ -125,8 +128,8 @@ input[type="submit"] {
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-<input type="hidden" name="oid" value="00D5Y000002UqV5" />
-<input type="hidden" name="retURL" value="http://asasd" />
+<input type="hidden" name="oid" value="00D5Y000002509q"/>
+<input type="hidden" name="retURL" value="https://i.ytimg.com/vi/T4RvVqnFc6k/maxresdefault.jpg"/>
 
     <!--  ----------------------------------------------------------------------  -->
     <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -136,20 +139,19 @@ input[type="submit"] {
     <!--  value="grupo2.protiviti@deypo.com">                                     -->
     <!--  ----------------------------------------------------------------------  -->
     
-    <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name" /><br/>
-    <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name" /><br/>
-    <input  id="email" maxlength="80" name="email" size="20" type="text" placeholder="Email" /><br/>
-    <input  id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company" /><br/>
-    <input  id="city" maxlength="40" name="city" size="20" type="text" placeholder="City" /><br/>
+    <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name" required="true"/><br/>
+    <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name" required="true"/><br/>
+    <input  id="email" maxlength="80" name="email" size="20" type="email" placeholder="Email" required="true"/><br/>
+    <input  id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company" required="true"/><br/>
+    <input  id="city" maxlength="40" name="city" size="20" type="text" placeholder="City" required="true"/><br/>
     <input  id="state" maxlength="20" name="state" size="20" type="text" placeholder="State/Province" /><br/>
+    <select  id="lead_source" name="lead_source"><option value="Web">Web</option></select><br/>
+    
     <input type="submit" name="submit"/>
     </form>            
   </div>
 </div>
-
-
-
-</apex:page>	
+</apex:page>
 			
 
 </body>
