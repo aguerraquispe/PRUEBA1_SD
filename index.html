@@ -24,6 +24,14 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <!--estilos sobreescritos-->
 <style type="text/css">
+.embeddedServiceHelpButton .helpButton .uiButton {
+	background-color: #005290;
+	font-family: "Arial", sans-serif;
+}
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+	outline: 1px solid #005290;
+}	
+	
 body.sfdcBody.brandQuaternaryBgr {
     background: #85b5ea;
 }
@@ -109,49 +117,68 @@ input[type="submit"] {
 	<body>
         <hr/>
 		<main style="width: 100%;">
-		<h2 class="w3-green w3-center" style="text-shadow:1px 1px 0 #444">AQUI DESCARGA ALGUNOS MP3</h2>
+
 		<hr><br/><br/><br/>
 		<div class="w3-center">
-		<a href="cancion1.mp3" download class="w3-button w3-green w3-center w3-round-xlarge" >MP3 1</a>
-		<a href="cancion2.mp3" download class="w3-button w3-green w3-center w3-round-xlarge" >MP3 2</a>
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://crehana--crehanadv2.my.salesforce.com',
+			'https://crehanadv2-customer.cs172.force.com/ayuda',
+			gslbBaseURL,
+			'00D590000008fpC',
+			'AgentesChat',
+			{
+				baseLiveAgentContentURL: 'https://c.la4-c1cs-ia5.salesforceliveagent.com/content',
+				deploymentId: '572590000008OIZ',
+				buttonId: '573590000008OIj',
+				baseLiveAgentURL: 'https://d.la4-c1cs-ia5.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'AgentesChat',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://crehana--crehanadv2.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
+			
+			
 		<div>
 		</main>
 		<hr/>
 			
-<apex:page >
-<h1>FORMULARIO NUEVO</h1>
-<div class="container">
-  <div class="bg">
-    <div class="logo"> <img src="https://image.flaticon.com/icons/svg/143/143361.svg" /> </div>
-    <h2 class="heading">Registro Web </h2>
-    <p> Al registrarse sera automaticamente asignado a un asesor de ventas </p>
-    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-<input type="hidden" name="oid" value="00D5Y000002509q"/>
-<input type="hidden" name="retURL" value="https://i.ytimg.com/vi/T4RvVqnFc6k/maxresdefault.jpg"/>
-
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-    <!--  these lines if you wish to test in debug mode.                          -->
-    <!--  <input type="hidden" name="debug" value=1>                              -->
-    <!--  <input type="hidden" name="debugEmail"                                  -->
-    <!--  value="grupo2.protiviti@deypo.com">                                     -->
-    <!--  ----------------------------------------------------------------------  -->
-    
-    <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name" required="true"/><br/>
-    <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name" required="true"/><br/>
-    <input  id="email" maxlength="80" name="email" size="20" type="email" placeholder="Email" required="true"/><br/>
-    <input  id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company" required="true"/><br/>
-    <input  id="city" maxlength="40" name="city" size="20" type="text" placeholder="City" required="true"/><br/>
-    <input  id="state" maxlength="20" name="state" size="20" type="text" placeholder="State/Province" /><br/>
-    <select  id="lead_source" name="lead_source"><option value="Web">Web</option></select><br/>
-    
-    <input type="submit" name="submit"/>
-    </form>            
-  </div>
-</div>
-</apex:page>
 			
 
 </body>
