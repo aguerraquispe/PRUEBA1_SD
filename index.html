@@ -523,20 +523,6 @@ Pais:<select  id="00N59000000TNRT" name="00N59000000TNRT" title="Pais"><option v
 </select><br>
 
 Domicilio:<input  id="00N59000000TNVf" maxlength="200" name="00N59000000TNVf" size="20" type="text" /><br>
-
-Tipo de bien:<select  id="00N59000000TNVk" name="00N59000000TNVk" title="Tipo de bien"><option value="">--Ninguno--</option><option value="Servicio">Servicio</option>
-</select><br>
-
-Categoría:<select  id="00N59000000TNVp" name="00N59000000TNVp" title="Categoría"><option value="">--Ninguno--</option><option value="Curso único">Curso único</option>
-<option value="Pack">Pack</option>
-<option value="Membresía">Membresía</option>
-<option value="Otros">Otros</option>
-</select><br>
-
-Monto a reclamar:<input  id="00N59000000TNVu" maxlength="15" name="00N59000000TNVu" size="20" type="text" /><br>
-
-Descripción del producto:<textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft" oninput="generateSubject()"></textarea><br>
-
 <script type="text/javascript">
     function generateSubject()
     {
@@ -546,9 +532,23 @@ Descripción del producto:<textarea  id="00N59000000TNVz" name="00N59000000TNVz"
             document.getElementById('00N59000000TNVz').value;
     }
 </script>
+Tipo de bien:<select  id="00N59000000TNVk" name="00N59000000TNVk" title="Tipo de bien" onkeyup="generateSubject()"><option value="">--Ninguno--</option><option value="Servicio">Servicio</option>
+</select><br>
 
-Asunto <span id="subject" /><br>
-<input  id="subject" name="subject" type="text" /><br>
+Categoría:<select  id="00N59000000TNVp" name="00N59000000TNVp" title="Categoría" onkeyup="generateSubject()"><option value="">--Ninguno--</option><option value="Curso único">Curso único</option>
+<option value="Pack">Pack</option>
+<option value="Membresía">Membresía</option>
+<option value="Otros">Otros</option>
+</select><br>
+
+Monto a reclamar:<input  id="00N59000000TNVu" maxlength="15" name="00N59000000TNVu" size="20" type="text" /><br>
+
+Descripción del producto:<textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft" onkeyup="generateSubject()"></textarea><br>
+
+
+<input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+<label for="description">Descripción</label><textarea name="description"></textarea><br>	
 	
 	
 <label for="type">Tipo</label><select  id="type" name="type"><option value="">--Ninguno--</option><option value="Incidente">Incidente</option>
