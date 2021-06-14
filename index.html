@@ -537,6 +537,20 @@ Monto a reclamar:<input  id="00N59000000TNVu" maxlength="15" name="00N59000000TN
 
 Descripción del producto:<textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft"></textarea><br>
 
+<script type="text/javascript">
+    function generateSubject()
+    {
+        document.getElementById('subject').innerText = 
+            document.getElementById('00N59000000TNVk').value + ' ' + 
+            document.getElementById('00N59000000TNVp').value + ' ' + 
+            document.getElementById('00N59000000TNVz').value;
+    }
+</script>
+
+Asunto <span id="subject" /><br>
+<input  id="subject" name="subject" type="text" /><br>
+	
+	
 <label for="type">Tipo</label><select  id="type" name="type"><option value="">--Ninguno--</option><option value="Incidente">Incidente</option>
 <option value="Pregunta">Pregunta</option>
 <option value="Problema">Problema</option>
