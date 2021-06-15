@@ -240,7 +240,8 @@ input[type="submit"] {
 		<div>
 		</main>
 		<hr/>
-			
+
+<h1>Libro de reclamaciones</h1>
 <form action="https://crehana--crehanadv2.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
 <input type=hidden name="orgid" value="00D590000008fpC">
@@ -255,7 +256,8 @@ input[type="submit"] {
 <!--  value="abel.guerra@protiviti.com.pe">                                   -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="name">Nombre del contacto</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+<h2>1. Identificación del consumidor reclamante</h2>	
+Nombres<input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
 
 Apellidos:<input  id="00N59000000TNWJ" maxlength="20" name="00N59000000TNWJ" size="20" type="text" /><br>
 
@@ -263,10 +265,10 @@ Tipo de Documento:<select  id="00N59000000TNPc" name="00N59000000TNPc" title="Ti
 <option value="CE">CE</option>
 <option value="PASAPORTE">PASAPORTE</option>
 </select><br>
-
-<label for="email">Correo electrónico</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-<label for="phone">Teléfono</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+Número de documento:<input  id="00N59000000TNRE" maxlength="15" name="00N59000000TNRE" size="20" type="text" /><br>
+	
+<label for="email">Correo</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+<label for="phone">Celular</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
 
 Pais:<select  id="00N59000000TNRT" name="00N59000000TNRT" title="Pais"><option value="">--Ninguno--</option><option value="Afghanistan">Afghanistan</option>
 <option value="Aland Islands">Aland Islands</option>
@@ -538,6 +540,8 @@ Domicilio:<input  id="00N59000000TNVf" maxlength="200" name="00N59000000TNVf" si
             document.getElementById('00N59000000TNW4').value;
     }
 </script>
+	
+<h2>1. Identificación del bien contratado</h2>	
 Tipo de bien:<select  id="00N59000000TNVk" name="00N59000000TNVk" title="Tipo de bien" oninput="generateSubject()"><option value="">--Ninguno--</option><option value="Servicio">Servicio</option>
 </select><br>
 
@@ -548,14 +552,12 @@ Categoría:<select  id="00N59000000TNVp" name="00N59000000TNVp" title="Categorí
 </select><br>
 
 Monto a reclamar:<input  id="00N59000000TNVu" maxlength="15" name="00N59000000TNVu" size="20" type="text" /><br>
-
-Descripción del producto:<textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft" oninput="generateSubject()"></textarea><br>
-
-
-Asuntos <input  id="subject" maxlength="80" name="subject" size="20" type="hidden" /><br>
-
-<label for="description">Descripción</label><textarea id="description" name="description" type="hidden"></textarea><br>	
 	
+<h2>3. Detalle de reclamo</h2>
+Descripción del producto:<textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft" oninput="generateSubject()"></textarea><br>
+	
+<input  id="subject" maxlength="80" name="subject" size="20" type="hidden" /><br>
+<textarea id="description" name="description" hidden="hidden"></textarea><br>	
 	
 <label for="type">Tipo</label><select  id="type" name="type"><option value="">--Ninguno--</option><option value="Incidente">Incidente</option>
 <option value="Pregunta">Pregunta</option>
@@ -564,17 +566,14 @@ Asuntos <input  id="subject" maxlength="80" name="subject" size="20" type="hidde
 <option value="Solicitud">Solicitud</option>
 </select><br>
 
-Detalle del reclamo:<textarea  id="00N59000000TNW4" name="00N59000000TNW4" rows="3" type="text" wrap="soft" oninput="generateDescription()"></textarea><br>
+<textarea  id="00N59000000TNW4" name="00N59000000TNW4" rows="3" type="text" wrap="soft" oninput="generateDescription()" placeholder="Detalle del reclamo"></textarea><br>
+<textarea  id="00N59000000TNW9" name="00N59000000TNW9" rows="3" type="text" wrap="soft" placeholder="Pedido del consumidor"></textarea><br>
 
-Pedido del consumidor:<textarea  id="00N59000000TNW9" name="00N59000000TNW9" rows="3" type="text" wrap="soft"></textarea><br>
+Declaro ser el usuario del servicio o producto y acepto el contenido del presente formulario manifestando bajo Declaración Jurada la veracidad de los hechos descritos<input  id="00N59000000TNWE" name="00N59000000TNWE" type="checkbox" value="1" /><br>
 
-Declaración jurada:<input  id="00N59000000TNWE" name="00N59000000TNWE" type="checkbox" value="1" /><br>
-
-<input type="submit" name="submit">
+<label for="submit">Enviar ahora</label><input type="submit" name="submit">
 
 </form>
-
-			
 
 </body>
 </html>
