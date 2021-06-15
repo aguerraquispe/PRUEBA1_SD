@@ -23,16 +23,16 @@
         <!--estilo menu-->
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <!--estilos sobreescritos-->
-<style type="text/css">
-.embeddedServiceHelpButton .helpButton .uiButton {
-	background-color: #005290;
-	font-family: "Arial", sans-serif;
-}
-.embeddedServiceHelpButton .helpButton .uiButton:focus {
-	outline: 1px solid #005290;
-}	
-	
-</style>
+    <style type="text/css">
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #005290;
+        font-family: "Arial", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #005290;
+    }	
+        
+    </style>
 	
 </head>   
 
@@ -41,7 +41,7 @@
 <main style="width: 100%;">
 
 <hr><br/>
-<div class="w3-center">
+<div class="w3-left">
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
@@ -100,7 +100,7 @@
 <div>
 
     <h1>Libro de reclamaciones</h1>
-    <form action="https://crehana--crehanadv2.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+    <form action="https://crehana--crehanadv2.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="w3-container w3-card-4 w3-light-grey">
     
     <input type=hidden name="orgid" value="00D590000008fpC">
     <input type=hidden name="retURL" value="http://">
@@ -115,9 +115,13 @@
     <!--  ----------------------------------------------------------------------  -->
     
     <h2>1. Identificación del consumidor reclamante</h2>	
-    Nombres<input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+    Nombres<br>
+    <input  id="name" maxlength="80" name="name" size="20" type="text" 
+    class="w3-input w3-border w3-round"/><br>
     
-    Apellidos:<input  id="00N59000000TNWJ" maxlength="20" name="00N59000000TNWJ" size="20" type="text" /><br>
+    Apellidos<br>
+    <input  id="00N59000000TNWJ" maxlength="20" name="00N59000000TNWJ" size="20" type="text" 
+    class="w3-input w3-border w3-round"/><br>
     
     Tipo de Documento:<select  id="00N59000000TNPc" name="00N59000000TNPc" title="Tipo de Documento"><option value="">--Ninguno--</option><option value="DNI">DNI</option>
     <option value="CE">CE</option>
