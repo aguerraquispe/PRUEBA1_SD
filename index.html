@@ -142,7 +142,8 @@
     class="w3-input w3-border w3-round"/><br>
     
     Pais
-    <select  id="00N59000000TNRT" name="00N59000000TNRT" title="Pais"><option value="" class="w3-select w3-border"></option><option value="Perú">Afghanistan</option>
+    <select  id="00N59000000TNRT" name="00N59000000TNRT" title="Pais" class="w3-select w3-border">
+        <option value="Afghanistan">Afghanistan</option>
         <option value="Aland Islands">Aland Islands</option>
         <option value="Albania">Albania</option>
         <option value="Algeria">Algeria</option>
@@ -438,8 +439,8 @@
     <textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft" oninput="generateSubject()" placeholder="Descripción del producto"
     class="w3-input w3-border w3-round"></textarea><br>
         
-    <input  id="subject" maxlength="80" name="subject" size="20" type="hidden" /><br>
-    <textarea id="description" name="description" hidden="hidden"></textarea><br>	
+    <input  id="subject" maxlength="80" name="subject" size="20" type="hidden" />
+    <textarea id="description" name="description" hidden="hidden"></textarea>	
         
     <label for="type">Tipo</label><select  id="type" name="type" class="w3-select w3-border">
         <option value="Incidente">Incidente</option>
@@ -447,16 +448,16 @@
         <option value="Problema">Problema</option>
         <option value="Reclamación" selected​="selected">Reclamación</option>
         <option value="Solicitud">Solicitud</option>
-    </select><br>
+    </select><br><br>
     
     <textarea  id="00N59000000TNW4" name="00N59000000TNW4" rows="3" type="text" wrap="soft" oninput="generateDescription()" placeholder="Detalle del reclamo"
     class="w3-input w3-border w3-round"></textarea><br>
     <textarea  id="00N59000000TNW9" name="00N59000000TNW9" rows="3" type="text" wrap="soft" placeholder="Pedido del consumidor"
     class="w3-input w3-border w3-round"></textarea><br>
     
-    <input  id="00N59000000TNWE" name="00N59000000TNWE" type="checkbox" value="1" />Declaro ser el usuario del servicio o producto y acepto el contenido del presente formulario manifestando bajo Declaración Jurada la veracidad de los hechos descritos<br>
+    <input  id="00N59000000TNWE" name="00N59000000TNWE" type="checkbox" value="1" class="w3-check"/>Declaro ser el usuario del servicio o producto y acepto el contenido del presente formulario manifestando bajo Declaración Jurada la veracidad de los hechos descritos<br>
     
-    <input type="submit" name="submit" value="Enviar ahora">
+    <input type="submit" name="submit" value="Enviar ahora" class="w3-btn>
     
 </form>   
 
