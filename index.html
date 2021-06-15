@@ -124,12 +124,12 @@
     class="w3-input w3-border w3-round"/><br>
     
     Tipo de Documento<br>
-    <select  id="00N59000000TNPc" name="00N59000000TNPc" title="Tipo de Documento"><option value="DNI">
-    </option><option value="DNI">DNI</option>
+    <select  id="00N59000000TNPc" name="00N59000000TNPc" title="Tipo de Documento" class="w3-select w3-border">
+    <option value="DNI" selected​="selected">DNI</option>
     <option value="CE">CE</option>
     <option value="PASAPORTE">PASAPORTE</option>
     </select><br>
-    
+
     Número de documento<br>
     <input  id="00N59000000TNRE" maxlength="15" name="00N59000000TNRE" size="20" type="text" 
     class="w3-input w3-border w3-round"/><br>
@@ -142,7 +142,7 @@
     class="w3-input w3-border w3-round"/><br>
     
     Pais
-    <select  id="00N59000000TNRT" name="00N59000000TNRT" title="Pais"><option value=""></option><option value="Perú">Afghanistan</option>
+    <select  id="00N59000000TNRT" name="00N59000000TNRT" title="Pais"><option value="" class="w3-select w3-border"></option><option value="Perú">Afghanistan</option>
         <option value="Aland Islands">Aland Islands</option>
         <option value="Albania">Albania</option>
         <option value="Algeria">Algeria</option>
@@ -316,7 +316,7 @@
         <option value="Panama">Panama</option>
         <option value="Papua New Guinea">Papua New Guinea</option>
         <option value="Paraguay">Paraguay</option>
-        <option value="Perú">Perú</option>
+        <option value="Perú" selected​="selected">Perú</option>
         <option value="Philippines">Philippines</option>
         <option value="Pitcairn">Pitcairn</option>
         <option value="Poland">Poland</option>
@@ -397,7 +397,8 @@
     </select><br>
     
     Domicilio
-    <input  id="00N59000000TNVf" maxlength="200" name="00N59000000TNVf" size="20" type="text" /><br>
+    <input  id="00N59000000TNVf" maxlength="200" name="00N59000000TNVf" size="20" type="text" 
+    class="w3-input w3-border w3-round"/><br>
     <script type="text/javascript">
         function generateSubject()
         {
@@ -415,32 +416,43 @@
     </script>
         
     <h2>2. Identificación del bien contratado</h2>	
-    Tipo de bien:<select  id="00N59000000TNVk" name="00N59000000TNVk" title="Tipo de bien" oninput="generateSubject()"><option value="">--Ninguno--</option><option value="Servicio">Servicio</option>
+    Tipo de bien
+    <select  id="00N59000000TNVk" name="00N59000000TNVk" title="Tipo de bien" oninput="generateSubject()" class="w3-select w3-border">
+        <option value="Servicio" selected​="selected">Servicio</option>
     </select><br>
     
-    Categoría:<select  id="00N59000000TNVp" name="00N59000000TNVp" title="Categoría" oninput="generateSubject()"><option value="">--Ninguno--</option><option value="Curso único">Curso único</option>
-    <option value="Pack">Pack</option>
-    <option value="Membresía">Membresía</option>
-    <option value="Otros">Otros</option>
+    Categoría
+    <select  id="00N59000000TNVp" name="00N59000000TNVp" title="Categoría" oninput="generateSubject()" class="w3-select w3-border">
+        <option value="Curso único" selected​="selected">Curso único</option>
+        <option value="Pack">Pack</option>
+        <option value="Membresía">Membresía</option>
+        <option value="Otros">Otros</option>
     </select><br>
     
-    Monto a reclamar:<input  id="00N59000000TNVu" maxlength="15" name="00N59000000TNVu" size="20" type="text" /><br>
+    Monto a reclamar
+    <input  id="00N59000000TNVu" maxlength="15" name="00N59000000TNVu" size="20" type="text" 
+    class="w3-input w3-border w3-round"/><br>
         
     <h2>3. Detalle de reclamo</h2>
-    <textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft" oninput="generateSubject()" placeholder="Descripción del producto"></textarea><br>
+
+    <textarea  id="00N59000000TNVz" name="00N59000000TNVz" rows="3" type="text" wrap="soft" oninput="generateSubject()" placeholder="Descripción del producto"
+    class="w3-input w3-border w3-round"></textarea><br>
         
     <input  id="subject" maxlength="80" name="subject" size="20" type="hidden" /><br>
     <textarea id="description" name="description" hidden="hidden"></textarea><br>	
         
-    <label for="type">Tipo</label><select  id="type" name="type"><option value="">--Ninguno--</option><option value="Incidente">Incidente</option>
-    <option value="Pregunta">Pregunta</option>
-    <option value="Problema">Problema</option>
-    <option value="Reclamación">Reclamación</option>
-    <option value="Solicitud">Solicitud</option>
+    <label for="type">Tipo</label><select  id="type" name="type" class="w3-select w3-border">
+        <option value="Incidente">Incidente</option>
+        <option value="Pregunta">Pregunta</option>
+        <option value="Problema">Problema</option>
+        <option value="Reclamación" selected​="selected">Reclamación</option>
+        <option value="Solicitud">Solicitud</option>
     </select><br>
     
-    <textarea  id="00N59000000TNW4" name="00N59000000TNW4" rows="3" type="text" wrap="soft" oninput="generateDescription()" placeholder="Detalle del reclamo"></textarea><br>
-    <textarea  id="00N59000000TNW9" name="00N59000000TNW9" rows="3" type="text" wrap="soft" placeholder="Pedido del consumidor"></textarea><br>
+    <textarea  id="00N59000000TNW4" name="00N59000000TNW4" rows="3" type="text" wrap="soft" oninput="generateDescription()" placeholder="Detalle del reclamo"
+    class="w3-input w3-border w3-round"></textarea><br>
+    <textarea  id="00N59000000TNW9" name="00N59000000TNW9" rows="3" type="text" wrap="soft" placeholder="Pedido del consumidor"
+    class="w3-input w3-border w3-round"></textarea><br>
     
     <input  id="00N59000000TNWE" name="00N59000000TNWE" type="checkbox" value="1" />Declaro ser el usuario del servicio o producto y acepto el contenido del presente formulario manifestando bajo Declaración Jurada la veracidad de los hechos descritos<br>
     
